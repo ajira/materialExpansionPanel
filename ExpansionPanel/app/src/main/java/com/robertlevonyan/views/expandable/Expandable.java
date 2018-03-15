@@ -272,7 +272,7 @@ public class Expandable extends FrameLayout {
         });
     }
 
-    private void expand() {
+    public void expand() {
         expandableViewParams.height = expandableViewHeight;
         expandableView.setLayoutParams(expandableViewParams);
         expandIcon.setRotation(180f);
@@ -282,7 +282,7 @@ public class Expandable extends FrameLayout {
         }
     }
 
-    private void expandWithAnimation() {
+    public void expandWithAnimation() {
         ValueAnimator sizeAnimator = ValueAnimator.ofFloat(1f, 1.2f);
         sizeAnimator.addUpdateListener(new ValueAnimator.AnimatorUpdateListener() {
             @Override
@@ -339,7 +339,7 @@ public class Expandable extends FrameLayout {
         isExpanded = true;
     }
 
-    private void collapse() {
+    public void collapse() {
         expandableViewParams.height = 0;
         expandableView.setLayoutParams(expandableViewParams);
         expandIcon.setRotation(0);
@@ -349,7 +349,7 @@ public class Expandable extends FrameLayout {
         }
     }
 
-    private void collapseWithAnimation() {
+    public void collapseWithAnimation() {
         ValueAnimator sizeAnimator = ValueAnimator.ofFloat(1.2f, 1f);
         sizeAnimator.addUpdateListener(new ValueAnimator.AnimatorUpdateListener() {
             @Override
